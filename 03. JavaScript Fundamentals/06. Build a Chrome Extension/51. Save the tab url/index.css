@@ -20,6 +20,15 @@ button {
     border: 1px solid #5f9341;
     font-weight: bold;
 }
+button:hover{
+    opacity:90%;
+    cursor: pointer;
+}
+
+button:active{
+    opacity: 90%;
+    transform: scale(0.9);
+}
 
 #delete-btn {
     background: white;

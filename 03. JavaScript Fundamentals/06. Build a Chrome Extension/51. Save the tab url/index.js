@@ -11,13 +11,13 @@ if (leadsFromLocalStorage) {
     render(myLeads)
 }
 
-const tabs = [
-    {url: "https://www.linkedin.com/in/per-harald-borgen/"}
-]
-
 tabBtn.addEventListener("click", function(){
-    // Save the url instead of logging it out
-    console.log(tabs[0].url)
+    chrome.tabs.query({active:true,lastFocusedWindow: true} ,tabs =>{
+        let currentTabURL = tabs[0].url;
+        myLeads.push(currentTabURL);
+        localStorage.setItem("myLeads",JSON.stringify(myLeads));
+        render(myLeads);
+    })
 })
 
 function render(leads) {
