@@ -2,10 +2,12 @@ let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
-
+myLeads = JSON.parse(localStorage.getItem("myLeads"));
 // 1. Save a key-value pair in localStorage
 // 2. Refresh the page. Get the value and log it to the console
 // 3. Clear localStorage
+// localStorage.setItem("myLeads",JSON.stringify(myLeads));
+// console.log(JSON.parse(localStorage.getItem("myLeads")));
 
 // HINTS:
 // localStorage.setItem(key, value)
@@ -18,6 +20,8 @@ inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     inputEl.value = ""
     renderLeads()
+    localStorage.setItem("myLeads",JSON.stringify(myLeads));
+console.log(JSON.parse(localStorage.getItem("myLeads")));
 })
 
 function renderLeads() {
