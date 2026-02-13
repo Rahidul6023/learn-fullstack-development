@@ -65,7 +65,12 @@ main{
 /* modal */
   
 .modal {
-    
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
 /*
 Challenge:
 1. Make the modal sit on top of the other content. 

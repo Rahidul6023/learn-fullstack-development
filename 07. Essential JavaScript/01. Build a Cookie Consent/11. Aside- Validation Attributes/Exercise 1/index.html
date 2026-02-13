@@ -34,6 +34,8 @@
                     id="astronautAge" 
                     name="astronautAge"
                     placeholder="21"
+                    min="21"
+                    max="120"
                     >
               <label for="astronautName">Country Code</label>
 <!-- Challenge:
@@ -51,7 +53,8 @@
                     id="astronautCountryCode" 
                     name="astronautCountryCode"
                     placeholder="Fra"
-                    > 
+                    pattern="[A-Za-z]{3}"
+                    >
                 <button type="submit">submit</button>
             </form>    
         </main>

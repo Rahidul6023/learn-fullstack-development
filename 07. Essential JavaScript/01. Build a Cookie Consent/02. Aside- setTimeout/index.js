@@ -1,10 +1,12 @@
 console.log('What is the capital of Peru?')
 
-setTimeout(function(){
-    console.log('Lima!')
-}, 3000)
+setTimeout(()=>{
+    console.log('Lima');
+},3000)
 
-console.log('Ready for next question?')
+setTimeout(()=>{
+    console.log('Ready for next question?')
+},6000)
 
 /*
 Challenge:

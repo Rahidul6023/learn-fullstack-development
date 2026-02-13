@@ -9,6 +9,12 @@ modalCloseBtn.addEventListener('click', function(){
     modal.style.display = 'none'
 })
 
+const form = document.getElementById("consent-form");
+form.addEventListener("submit",(event)=>{
+    event.preventDefault();
+    console.log("form submitted")
+})
+
 /*
 Challenge:
 1. Take control of the form element. 

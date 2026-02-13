@@ -5,7 +5,8 @@ Challenge:
    which will change the CSS 'display' property
    of our modal to 'inline'.
 */
+const modal = document.getElementById('modal');
 
 setTimeout(function(){
-    console.log('Modal Opened!')
+    modal.style.display='inline';
 }, 1500)
