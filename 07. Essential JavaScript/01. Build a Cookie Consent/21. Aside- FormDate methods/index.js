@@ -11,6 +11,7 @@ loginForm.addEventListener('submit', function(e){
 Challenge: 
 1. Log out the email and password from loginFormData.
 */
-
+    const email = loginFormData.get('astronautEmail')
+    console.log(email)
 
 })

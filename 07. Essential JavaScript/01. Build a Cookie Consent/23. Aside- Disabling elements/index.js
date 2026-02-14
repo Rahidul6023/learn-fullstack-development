@@ -9,6 +9,7 @@ decrement.addEventListener('click', function(){
     quantity--
     if (quantity === 0){
         decrement.disabled = true
+        cartBtn.disabled = true
     }     
     quantityDisplay.innerText = quantity
 })
@@ -16,11 +17,16 @@ decrement.addEventListener('click', function(){
 increment.addEventListener('click', function(){
     quantity ++
     decrement.disabled = false
+    cartBtn.disabled = false
     quantityDisplay.innerText = quantity
 })
  
+
 cartBtn.addEventListener('click', function(){
     console.log(`Your order for ${quantity} pairs of shoes is being processed`)
+    if(quantity === 0){
+        cartBtn.disabled = true
+    }
 /*
 Challenge:
 1. Disable the 'Add to Cart' button when 

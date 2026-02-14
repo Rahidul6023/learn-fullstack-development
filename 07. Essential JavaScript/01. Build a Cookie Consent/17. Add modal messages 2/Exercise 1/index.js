@@ -18,7 +18,14 @@ consentForm.addEventListener('submit', function(e){
         <img src="images/loading.svg" class="loading">
         <p id="upload-text">Uploading your data to the dark web...</p>
     </div>` 
-  
+    setTimeout(()=>{
+        modalText.innerHTML = `
+        <div class="modal-inner-loading">
+        <img src="images/loading.svg" class="loading">
+        <p id="upload-text">Making the sale...</p>
+        </div>
+        `
+    },1500)
 /*   
 Challenge: 
 1. Use a setTimeout to make the phrase "Uploading

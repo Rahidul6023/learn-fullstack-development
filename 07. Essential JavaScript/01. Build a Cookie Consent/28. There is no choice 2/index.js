@@ -3,7 +3,9 @@ const modalCloseBtn = document.getElementById('modal-close-btn')
 const consentForm = document.getElementById('consent-form')
 const modalText = document.getElementById('modal-text')
 const declineBtn = document.getElementById('decline-btn')
-
+const modalBtns = document.getElementById('modal-choice-btns')
+let toggleNumber = 0;
+modalBtns.classList.add("correct")
 setTimeout(function(){
     modal.style.display = 'inline'
 }, 1500)
@@ -13,8 +15,18 @@ modalCloseBtn.addEventListener('click', function(){
 })
 
 declineBtn.addEventListener('mouseenter', function(){
-    console.log('hovered')
+    if(toggleNumber%2 === 0){
+        modalBtns.classList.remove("correct")
+        modalBtns.classList.add("reverse")
+        toggleNumber++;
+    }
+    else{
+        modalBtns.classList.remove("reverse")
+        modalBtns.classList.add("correct")
+        toggleNumber++;
+    }
 })
+
 
 /*   
 Challenge: 

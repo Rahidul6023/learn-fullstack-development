@@ -10,8 +10,19 @@ modalCloseBtn.addEventListener('click', function(){
     modal.style.display = 'none'
 })
 
+const modalText = document.getElementById('modal-text');
+
 consentForm.addEventListener('submit', function(e){
     e.preventDefault()
+    modalText.innerHTML = 
+    `
+    <div class="modal-inner-loading">
+    <img src="images/loading.svg" class="loading">
+    <p id="uploadText">
+        Uploading your data to the dark web...
+    </p>
+    </div>
+    `
 /*
 Challenge:
 1. Take control of the "modal-text" element. 

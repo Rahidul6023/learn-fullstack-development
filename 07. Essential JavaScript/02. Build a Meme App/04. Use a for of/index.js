@@ -170,6 +170,9 @@ const catsData = [
 ]
 
 function getEmotionsArray(cats){
+    for(let emotion of cats){
+        console.log(emotion)
+    }
 /*
 Challenge:
 1. Set up a "for of" in getEmotionsArray to iterate 

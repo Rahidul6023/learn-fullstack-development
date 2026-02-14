@@ -3,6 +3,7 @@ const modalCloseBtn = document.getElementById('modal-close-btn')
 const consentForm = document.getElementById('consent-form')
 const modalText = document.getElementById('modal-text')
 
+modalCloseBtn.disabled = true;
 setTimeout(function(){
     modal.style.display = 'inline'
 }, 1500)
@@ -43,6 +44,7 @@ Challenge:
             <img src="images/pirate.gif">
         </div>
     `
+        modalCloseBtn.disabled = false;
     }, 3000)
   
 }) 

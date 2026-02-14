@@ -16,7 +16,8 @@ consentForm.addEventListener('submit', function(e){
     
     const consentFormData = new FormData(consentForm)
     console.log(consentFormData)
-
+    const username = consentFormData.get('fullName')
+     
 /*   
 Challenge: 
 1. Create a const to store the user's name and
@@ -42,7 +43,7 @@ Challenge:
     
     setTimeout(function(){
         document.getElementById('modal-inner').innerHTML = `
-        <h2>Thanks <span class="modal-display-name">NAME</span>, you sucker! </h2>
+        <h2>Thanks <span class="modal-display-name">${username}</span>, you sucker! </h2>
         <p>We just sold the rights to your eternal soul.</p>
         <div class="idiot-gif">
             <img src="images/pirate.gif">

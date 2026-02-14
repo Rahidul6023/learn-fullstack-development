@@ -14,6 +14,8 @@ modalCloseBtn.addEventListener('click', function(){
 consentForm.addEventListener('submit', function(e){
     e.preventDefault()
 
+    const formdata = new FormData(consentForm);
+    console.log(formdata);
 /*   
 Challenge: 
 1. Inside the body of this event listener, 
