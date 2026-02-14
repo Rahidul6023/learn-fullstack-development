@@ -1,4 +1,4 @@
-import { catsData } from '/data.js'
+import {catsData} from './data.js'
 
 const emotionRadios = document.getElementById('emotion-radios')
 
@@ -32,7 +32,12 @@ Challenge:
       **RADIO HERE**
    </div>
 */ 
-        radioItems += `<p>${emotion}</p>` 
+        radioItems += `
+        <div class="radio">
+        <input type="radio" id="${emotion}" value="${emotion}" name="choice-radios">
+        <label for="${emotion}">${emotion}</label>
+        </div>
+        ` 
     }
     emotionRadios.innerHTML = radioItems
 }

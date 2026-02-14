@@ -179,7 +179,9 @@ function getEmotionsArray(cats){
     return emotionsArray
 }
 
-function renderEmotionsRadios(){
+function renderEmotionsRadios(cats){
+    const emotions = getEmotionsArray(cats)
+    console.log(emotions)
 /*
 Challenge:
 1. Have the new function "renderEmotionsRadios" 
@@ -194,7 +196,7 @@ Challenge:
 4. Call renderEmotionsRadios passing in catsData.
 */
 }
-
+renderEmotionsRadios(catsData)
 
 
 

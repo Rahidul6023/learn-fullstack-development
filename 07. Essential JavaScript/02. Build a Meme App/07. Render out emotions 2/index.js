@@ -179,6 +179,7 @@ function getEmotionsArray(cats){
     return emotionsArray
 }
 
+const emotionRadios = document.getElementById("emotion-radios")
 /*
 Challenge:
 1. Take control of the 'emotion-radios' div.
@@ -194,7 +195,13 @@ Challenge:
 function renderEmotionsRadios(cats){
     const emotions = getEmotionsArray(cats)
     console.log(emotions)
+    let randomString = ``
+    for(let emotion of emotions){
+        randomString = randomString + `<p>${emotion}</p>`
+    }
+    emotionRadios.innerHTML = randomString
 }
+    
 
 renderEmotionsRadios(catsData)
 
