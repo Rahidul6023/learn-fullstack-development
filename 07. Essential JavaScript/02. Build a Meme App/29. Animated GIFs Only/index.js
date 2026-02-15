@@ -1,4 +1,4 @@
-import { catsData } from '/data.js'
+import { catsData } from './data.js'
 
 const emotionRadios = document.getElementById('emotion-radios')
 const getImageBtn = document.getElementById('get-image-btn')
@@ -28,8 +28,8 @@ Challenge:
    array that only has GIFs if the 'GIFs only' option is 
    checked. If the 'GIFs only' option is not checked, it
    should return an array of all matches as it does now.
-*/ 
-            return cat.emotionTags.includes(selectedEmotion)
+*/          if(isGif) return (cat.emotionTags.includes(selectedEmotion) && cat.isGif)
+            else return cat.emotionTags.includes(selectedEmotion)
         })
         console.log(matchingCatsArray)
     }  

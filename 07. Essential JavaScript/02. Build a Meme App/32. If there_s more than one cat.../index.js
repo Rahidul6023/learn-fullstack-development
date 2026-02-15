@@ -1,4 +1,4 @@
-import { catsData } from '/data.js'
+import { catsData } from './data.js'
 
 const emotionRadios = document.getElementById('emotion-radios')
 const getImageBtn = document.getElementById('get-image-btn')
@@ -42,6 +42,8 @@ function getSingleCatObject(){
         console.log(catsArray[0])
     }
     else {
+        let i = Math.floor(Math.random()*catsArray.length)
+        console.log(catsArray[i])
 /*
 Challenge:
 1. If catsArray has more than one object, 

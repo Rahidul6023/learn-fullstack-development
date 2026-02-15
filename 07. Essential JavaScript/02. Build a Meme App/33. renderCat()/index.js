@@ -1,4 +1,4 @@
-import { catsData } from '/data.js'
+import { catsData } from './data.js'
 
 const emotionRadios = document.getElementById('emotion-radios')
 const getImageBtn = document.getElementById('get-image-btn')
@@ -67,6 +67,13 @@ Challenge:
         alt="CAT ALT TEXT"
         >`
 */ 
+    const catObject = getSingleCatObject()
+    memeModalInner.innerHTML = `<img 
+        class="cat-img" 
+        src="./images/${catObject.image}"
+        alt="${catObject.alt}"
+        >`
+    memeModal.style.display = "flex"
 }
  
 function getEmotionsArray(cats){

@@ -1,4 +1,4 @@
-import { catsData } from '/data.js'
+import { catsData } from './data.js'
 
 const emotionRadios = document.getElementById('emotion-radios')
 const getImageBtn = document.getElementById('get-image-btn')
@@ -15,6 +15,10 @@ Challenge:
 1. Wire up the X button in the modal so
    it closes the modal.
 */ 
+const modalCloseBtn = document.getElementById("meme-modal-close-btn")
+modalCloseBtn.addEventListener("click",()=>{
+    memeModal.style.display = "none"
+})
 
 function highlightCheckedOption(e){
     const radios = document.getElementsByClassName('radio')

@@ -35,6 +35,7 @@ function getMatchingCatsArray(){
 }
 
 function getSingleCatObject(){
+    const catsArray = getMatchingCatsArray()
 /*
 Challenge:
 1. Inside this function, call getMatchingCatsArray 

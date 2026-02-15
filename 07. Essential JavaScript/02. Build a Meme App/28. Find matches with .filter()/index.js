@@ -21,6 +21,8 @@ function getMatchingCatsArray(){
     if(document.querySelector('input[type="radio"]:checked')){
         const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
         const isGif = gifsOnlyOption.checked
+        const catsArray = catsData.filter((em)=> em.emotionTags.includes(selectedEmotion))
+        console.log(catsArray)
 /*
 Challenge:
 1. Use the .filter() and .includes() methods to get 
