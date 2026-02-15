@@ -37,6 +37,9 @@ const newYorkSeries = series.filter(function(show){
 
 console.log(newYorkSeries)
 
+const thrillerSeries = series.filter((s)=> s.genres.includes("thriller"))
+
+console.log(thrillerSeries)
 /*
 Challenge:
 1. Use the .filter() method to create an array

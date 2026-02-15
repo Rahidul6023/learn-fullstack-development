@@ -1,7 +1,8 @@
-import { catsData } from '/data.js'
+import { catsData } from './data.js'
 
 const emotionRadios = document.getElementById('emotion-radios')
 const getImageBtn = document.getElementById('get-image-btn')
+const gifOnlyOption = document.getElementById("gifs-only-option")
 
 emotionRadios.addEventListener('change', highlightCheckedOption)
 
@@ -17,7 +18,10 @@ function highlightCheckedOption(e){
 
 
 function getMatchingCatsArray(){
-    
+    let gifOnly = false
+    if(gifOnlyOption.checked) gifOnly = true
+
+    if(gifOnly) console.log("GIF ONLY")
 /*
 Challenge:
 1. Take control of the gifs only option checkbox.

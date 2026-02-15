@@ -1,7 +1,9 @@
 const continueBtn = document.getElementById('continue-btn')
 const acceptTerms = document.getElementById('accept-terms')
+const acceptMail = document.getElementById('accept-mail')
 
 continueBtn.addEventListener('click', function(){
+    
     
 /*
 Challenge:
@@ -16,5 +18,11 @@ Challenge:
     }
     else{
         console.log("Terms refused!")         
+    }
+    if(acceptMail.checked){
+        console.log("mail accepted")
+    }
+    else{
+        console.log("mail not accepted")
     }
 })
