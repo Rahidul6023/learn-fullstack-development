@@ -21,8 +21,9 @@ Challenge:
 1. Add code to getMatchingCatsArray so 
    that the two existing lines of code 
    only run if an emotion has been selected.
-*/
-    const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
+*/ 
+    const selectedEmotion = document.querySelector('input[type="radio"]:checked')
+    if(selectedEmotion)
     console.log(selectedEmotion)
 }
 

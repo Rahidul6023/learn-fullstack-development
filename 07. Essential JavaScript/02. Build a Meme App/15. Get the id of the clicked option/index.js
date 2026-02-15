@@ -1,4 +1,4 @@
-import { catsData } from '/data.js'
+import { catsData } from './data.js'
 
 const emotionRadios = document.getElementById('emotion-radios')
 
@@ -12,6 +12,9 @@ Challenge:
    'click'. Google what event to listen for - I've already 
    given you a clue!
 */
+emotionRadios.addEventListener("change",(element)=>{
+    console.log(element)
+})
 
 function getEmotionsArray(cats){
     const emotionsArray = []    

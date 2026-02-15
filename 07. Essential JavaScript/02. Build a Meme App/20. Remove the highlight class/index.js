@@ -1,10 +1,16 @@
-import { catsData } from '/data.js'
+import { catsData } from './data.js'
 
 const emotionRadios = document.getElementById('emotion-radios')
 
 emotionRadios.addEventListener('change', highlightCheckedOption)
 
+let m = null
 function highlightCheckedOption(e){
+    if(m){
+        let previousSelectedEmotion = document.getElementById(m.target.id)
+        previousSelectedEmotion.parentElement.classList.remove("highlight")
+    }
+    
 /*
 Challenge:
 1. Create an array of all items that have 
@@ -13,6 +19,7 @@ Challenge:
    "highlight" class from each one.
 */ 
     document.getElementById(e.target.id).parentElement.classList.add('highlight')
+    m=e
 }
 
 function getEmotionsArray(cats){

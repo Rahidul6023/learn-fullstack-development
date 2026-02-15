@@ -1,4 +1,4 @@
-import { catsData } from '/data.js'
+import { catsData } from './data.js'
 
 const emotionRadios = document.getElementById('emotion-radios')
 
@@ -14,8 +14,9 @@ Challenge:
    if it is not already in emotionsArray.
    Extra kudos if you use the "logical not"
    operator - feel free to google it!
-*/
+*/          if(!emotionsArray.includes(emotion)){
             emotionsArray.push(emotion)
+            }
         }
     }
     return emotionsArray

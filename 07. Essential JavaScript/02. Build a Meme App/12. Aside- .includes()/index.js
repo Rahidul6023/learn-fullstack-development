@@ -16,9 +16,16 @@ Challenge:
 3. If an item is a duplicate, clear the input field
    and log out "no duplicates".
 */
-        shoppingList.push(itemInput.value)
-        render()        
-        itemInput.value = '' 
+        if(shoppingList.includes(itemInput.value)){
+            itemInput.value = ''
+            console.log("no duplicates")
+        
+        }
+    else{
+            shoppingList.push(itemInput.value)
+            render()        
+            itemInput.value = '' 
+        }
 })
 
 function render(){    

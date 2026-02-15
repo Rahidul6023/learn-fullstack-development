@@ -1,4 +1,4 @@
-import { catsData } from '/data.js'
+import { catsData } from './data.js'
 
 const emotionRadios = document.getElementById('emotion-radios')
 
@@ -10,7 +10,8 @@ Challenge:
 1. highlightCheckedOption should take control 
    of the selected radio input and add the CSS
    class of "highlight" to its classlist.
-*/
+*/  
+
     console.log(e.target.id)
 }
  

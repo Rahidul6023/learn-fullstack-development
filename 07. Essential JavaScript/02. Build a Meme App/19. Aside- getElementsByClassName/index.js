@@ -47,7 +47,11 @@ Challenge:
    the "purchase" class and add the 
    "on-offer" class.
 */
-    const productsArray = 
+    const productsArray = document.getElementsByClassName("product")
+    for(let product of productsArray){
+        product.classList.add("on-offer")
+        product.classList.remove("purchased")
+    }
 })
 
 

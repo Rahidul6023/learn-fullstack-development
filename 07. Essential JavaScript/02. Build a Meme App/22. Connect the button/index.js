@@ -1,7 +1,16 @@
-import { catsData } from '/data.js'
+import { catsData } from './data.js'
 
 const emotionRadios = document.getElementById('emotion-radios')
 
+const getImage = document.getElementById("get-image-btn")
+
+getImage.addEventListener("click",getMatchingCatsArray)
+
+function getMatchingCatsArray(){
+    let selected = document.querySelector("input[name = emotions]:checked")
+    if(selected) console.log(selected.value)
+    else console.log("nothing selected")
+}
 /*
 Challenge:
 1. Set up an eventlistener which calls a new

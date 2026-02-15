@@ -1,17 +1,25 @@
-import { catsData } from '/data.js'
+import { catsData } from './data.js'
 
 const emotionRadios = document.getElementById('emotion-radios')
 
 emotionRadios.addEventListener('change', highlightCheckedOption)
 
+let m = null
 function highlightCheckedOption(e){
+    if(m){
+        let previousSelectedEmotion = document.getElementById(m.target.id)
+        previousSelectedEmotion.parentElement.classList.remove("highlight")
+    }
+    
 /*
 Challenge:
 1. highlightCheckedOption should take control 
    of the selected radio input and add the CSS
    class of "highlight" to its classlist.
-*/
+*/  const selectedEmotion = document.getElementById(e.target.id)
+    selectedEmotion.parentElement.classList.add("highlight")
     console.log(e.target.id)
+    m=e
 }
  
 
