@@ -16,9 +16,35 @@ Challenge:
 2. Store this HTML in a let called "feedHtml".
 3. Log out feedHtml.
 4. Call getFeedHtml to check it's working.
-*/  
+*/
+    for(let tweets of tweetsData){
+        let feedHtml = `
+    <div class="tweet">
+        <div class="tweet-inner">
+            <img src="${tweets.profilePic}" class="profile-pic">
+            <div>
+                <p class="handle">${tweets.handle}</p>
+                <p class="tweet-text">${tweets.tweetText}</p>
+                <div class="tweet-details">
+                    <span class="tweet-detail">
+                        ${tweets.replies.length}
+                    </span>
+                    <span class="tweet-detail">
+                        ${tweets.likes}
+                    </span>
+                    <span class="tweet-detail">
+                        ${tweets.retweets}
+                    </span>
+                </div>   
+            </div>            
+        </div>
+    </div>
+        `
+    console.log(feedHtml)
+    }
 }
 
+getFeedHtml()
 
 /*
 <div class="tweet">
