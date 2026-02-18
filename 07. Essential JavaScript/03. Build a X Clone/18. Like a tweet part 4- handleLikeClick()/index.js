@@ -8,6 +8,7 @@ tweetBtn.addEventListener('click', function(){
 
 document.addEventListener('click', function(e){
     console.log('like', e.target.dataset.like)
+    handleLikeClick(e.target.dataset.like)
 /*
 Challenge:
 1. If a like icon has been clicked, call handleLikeClick
@@ -16,13 +17,14 @@ Challenge:
 */
 })
 
-function handleLikeClick(){
+function handleLikeClick(tweetId){
 /*
 Challenge:
 2. handleLikeClick should take in a parameter. 
    You can call this parameter 'tweetId'. For 
    now just log out tweetId.
 */
+console.log(tweetId)
 }
 
 function getFeedHtml(){

@@ -67,7 +67,7 @@ Challenge:
 1. Use an if statement to check if a tweet has replies.
 2. If it does, log out the uuid for that tweet.
 */
-          
+        if(tweet.replies.length) console.log(tweet.uuid)
         feedHtml += `
 <div class="tweet">
     <div class="tweet-inner">

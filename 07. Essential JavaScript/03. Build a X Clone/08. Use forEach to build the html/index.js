@@ -14,7 +14,7 @@ Challenge:
 */
       
     let feedHtml = ``
-    for (let tweet of tweetsData){
+    tweetsData.forEach((tweet)=>{
         feedHtml += `
 <div class="tweet">
     <div class="tweet-inner">
@@ -37,8 +37,7 @@ Challenge:
     </div>
 </div>
 `
-   }
-   return feedHtml 
+    return feedHtml 
+   })
 }
-
 console.log(getFeedHtml())

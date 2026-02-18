@@ -12,15 +12,19 @@ const tweetInput = document.getElementById('tweet-input')
 document.addEventListener('click', function(e){
     if(e.target.dataset.like){
        handleLikeClick(e.target.dataset.like) 
+       render()
     }
     else if(e.target.dataset.retweet){
         handleRetweetClick(e.target.dataset.retweet)
+        render()
     }
     else if(e.target.dataset.reply){
         handleReplyClick(e.target.dataset.reply)
+        render()
     }
     else if(e.target.id === 'tweet-btn'){
         handleTweetBtnClick()
+        render()
     }
 })
  
@@ -36,7 +40,6 @@ function handleLikeClick(tweetId){
         targetTweetObj.likes++ 
     }
     targetTweetObj.isLiked = !targetTweetObj.isLiked
-    render()
 }
 
 function handleRetweetClick(tweetId){
@@ -51,7 +54,6 @@ function handleRetweetClick(tweetId){
         targetTweetObj.retweets++
     }
     targetTweetObj.isRetweeted = !targetTweetObj.isRetweeted
-    render() 
 }
 
 function handleReplyClick(replyId){
@@ -64,6 +66,7 @@ Challenge:
 1. No empty tweets!
 2. Clear the textarea after tweeting!
 */
+    if(!tweetInput.value) return
     tweetsData.unshift({
         handle: `@Scrimba`,
         profilePic: `images/scrimbalogo.png`,
@@ -75,7 +78,7 @@ Challenge:
         isRetweeted: false,
         uuid: uuidv4()
     })
-    render()
+    tweetInput.value = ""
 }
 
 function getFeedHtml(){

@@ -26,7 +26,11 @@ Challenge:
    by 1.
 3. Log out targetTweetObj.
 */
-
+tweetsData.forEach((e)=>{
+    if(e.uuid===tweetId){e.likes++
+    console.log(e)
+    }
+})
 }
 
 function getFeedHtml(){

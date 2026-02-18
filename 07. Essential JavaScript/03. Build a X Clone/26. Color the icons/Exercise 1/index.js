@@ -51,6 +51,7 @@ function getFeedHtml(){
     tweetsData.forEach(function(tweet){
         
         let likeIconClass = ''
+        if(tweet.isLiked) likeIconClass = 'liked'
         
 /*
 Challenge:
@@ -75,7 +76,7 @@ Challenge:
                     ${tweet.replies.length}
                 </span>
                 <span class="tweet-detail">
-                    <i class="fa-solid fa-heart"
+                    <i class="fa-solid fa-heart ${likeIconClass}"
                     data-like="${tweet.uuid}"
                     ></i>
                     ${tweet.likes}

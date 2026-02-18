@@ -45,7 +45,8 @@ Challenge:
    function to the 'feed' div. 
    See if you can do this with just one line of code!
 */
+    document.getElementById('feed').innerHTML = getFeedHtml()
 }
 
 // call render
-
+render()

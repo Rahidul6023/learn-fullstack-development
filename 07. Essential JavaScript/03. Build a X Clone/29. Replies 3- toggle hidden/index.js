@@ -57,6 +57,9 @@ Challenge:
    what id that div will have.)  
 2. Toggle the CSS class "hidden" on that div. 
 */ 
+let reply = document.getElementById(`replies-${replyId}`)
+if(reply.classList.contains("hidden")) reply.classList.remove("hidden")
+else reply.classList.add("hidden")
 }
 
 function getFeedHtml(){

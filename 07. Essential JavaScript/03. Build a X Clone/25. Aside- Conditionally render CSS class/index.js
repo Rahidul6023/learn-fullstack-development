@@ -10,6 +10,7 @@ Challenge:
 
 
 let isLiked = false
+let isShared = false
 
 
 document.addEventListener('click', function(e){
@@ -17,17 +18,22 @@ document.addEventListener('click', function(e){
         isLiked = !isLiked
         render()
     }
-    else if(e.target.dataset.share){
-        
+    if(e.target.dataset.share){
+        isShared = !isShared
+        render()
     }
 })
 
 function render(){ 
     
     let heartClass = ''
+    let shareClass = ''
     
     if(isLiked){
         heartClass = 'liked'
+    }
+    if(isShared){
+        shareClass = 'shared'
     }
        
     let imageHtml = `
@@ -35,7 +41,7 @@ function render(){
 			<img src="dino2.jpeg" alt="Man in front of dinosaur">
 			<div class="social-icons-container">
 				<i class="fa-solid fa-heart ${heartClass}" data-heart="image-1"></i>
-				<i class="fa-solid fa-share " data-share="image-1"></i>
+				<i class="fa-solid fa-share ${shareClass}" data-share="image-1"></i>
 			</div>
     `
     galleryContainer.innerHTML = imageHtml

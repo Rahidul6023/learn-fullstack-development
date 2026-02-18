@@ -10,6 +10,10 @@ document.addEventListener('click', function(e){
     if(e.target.dataset.like){
        handleLikeClick(e.target.dataset.like) 
     }
+    if(e.target.dataset.retweet){
+        handleRetweetClick(e.target.dataset.retweet)
+    }
+
 /*
 Challenge:
 1. Make this eventListener call "handleRetweetClick" 
@@ -41,7 +45,12 @@ Challenge:
 3. Increment or decrement the retweet count of the 
    tweet and flip its isRetweeted boolean.
 4. Call the render function.  
-*/   
+*/
+const retweetedObj = tweetsData.filter((e)=> {return e.uuid===tweetId})[0]
+if(retweetedObj.isRetweeted) retweetedObj.retweets--
+else retweetedObj.retweets++
+retweetedObj.isRetweeted = !retweetedObj.isRetweeted
+render()
 }
 
 function getFeedHtml(){

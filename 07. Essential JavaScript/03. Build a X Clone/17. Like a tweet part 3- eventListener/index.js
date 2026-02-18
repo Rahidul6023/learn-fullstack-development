@@ -6,7 +6,10 @@ tweetBtn.addEventListener('click', function(){
     console.log(tweetInput.value)
 })
 
-document.addEventListener('click', function(){
+document.addEventListener('click', function(e){
+    if(e.target.dataset.like){
+        console.log(e.target.dataset.like)
+    }
 /*
 Challenge:
 1. When a like icon is clicked, this function 

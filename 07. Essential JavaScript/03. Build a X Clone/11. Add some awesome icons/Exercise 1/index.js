@@ -32,13 +32,16 @@ Challenge:
             <p class="tweet-text">${tweet.tweetText}</p>
             <div class="tweet-details">
                 <span class="tweet-detail">
-                    ${tweet.replies.length}
+                ${tweet.replies.length}
+                <i class="fa-regular fa-comment-dots"></i>
                 </span>
                 <span class="tweet-detail">
-                    ${tweet.likes}
+                ${tweet.likes}
+                <i class="fa-solid fa-heart"></i>
                 </span>
                 <span class="tweet-detail">
-                    ${tweet.retweets}
+                ${tweet.retweets}
+                <i class="fa-solid fa-retweet"></i>
                 </span>
             </div>   
         </div>            

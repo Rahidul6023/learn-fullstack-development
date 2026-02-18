@@ -4,6 +4,7 @@ import { tweetsData } from './data.js'
 Challenge:
 1. Bring in uuidjs.
 */
+import { UUID } from "https://unpkg.com/uuidjs@^5"
 
 const tweetInput = document.getElementById('tweet-input')
 
@@ -57,7 +58,18 @@ function handleReplyClick(replyId){
 }
 
 function handleTweetBtnClick(){
-    console.log(tweetInput.value)
+    const newTweet = {
+        handle: `@Scrimba`,
+        profilePic: `images/troll.jpg`,
+        likes: 0,
+        retweets: 0,
+        tweetText: `${tweetInput.value}`,
+        replies: [],
+        isLiked: false,
+        isRetweeted: false,
+        uuid: `${UUID.generate()}`,
+    }
+    console.log(newTweet)
 /*
 Challenge:
 2. When the Tweet button is clicked, log out an object

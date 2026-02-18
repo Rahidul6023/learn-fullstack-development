@@ -58,7 +58,7 @@ Challenge:
 1. Add the new tweet object to 'tweetsData'
    and make it render at the top of the feed. 
 */ 
-    console.log({
+    tweetsData.unshift({
         handle: `@Scrimba`,
         profilePic: `images/scrimbalogo.png`,
         likes: 0,
@@ -69,6 +69,7 @@ Challenge:
         isRetweeted: false,
         uuid: uuidv4()
     })
+    console.log(tweetsData)
 }
 
 function getFeedHtml(){

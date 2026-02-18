@@ -16,6 +16,10 @@ document.addEventListener('click', function(e){
     else if(e.target.dataset.reply){
         handleReplyClick(e.target.dataset.reply)
     }
+    else if(e.target === tweetBtn){
+        handleTweetBtnClick()
+    }
+
 /*
 Challenge:
 1. Add an else if so that if the Tweet button

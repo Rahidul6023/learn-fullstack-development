@@ -27,12 +27,11 @@ Challenge:
 
     if (targetTweetObj.isLiked){
         targetTweetObj.likes--
-        targetTweetObj.isLiked = false // delete
     }
     else{
-        targetTweetObj.likes++
-        targetTweetObj.isLiked = true // delete  
+        targetTweetObj.likes++  
     }
+    targetTweetObj.isLiked = !targetTweetObj.isLiked
     
     render()
 }
