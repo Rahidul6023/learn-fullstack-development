@@ -6,7 +6,6 @@ Challenge:
 3. We could improve index.js by moving one line
    of code to a better position. Find it and move it!
 */
-
 const tweetInput = document.getElementById('tweet-input')
 
 document.addEventListener('click', function(e){
@@ -20,7 +19,6 @@ document.addEventListener('click', function(e){
     }
     else if(e.target.dataset.reply){
         handleReplyClick(e.target.dataset.reply)
-        render()
     }
     else if(e.target.id === 'tweet-btn'){
         handleTweetBtnClick()
@@ -60,6 +58,7 @@ function handleReplyClick(replyId){
     document.getElementById(`replies-${replyId}`).classList.toggle('hidden')
 }
 
+let userInputArray = []
 function handleTweetBtnClick(){
 /*
 Challenge:
@@ -78,8 +77,19 @@ Challenge:
         isRetweeted: false,
         uuid: uuidv4()
     })
+    userInputArray.unshift(tweetsData[0])
+    localStorage.setItem('previousData',JSON.stringify(userInputArray))
     tweetInput.value = ""
 }
+
+function handlePreviousTweets(){
+    const previousTweets = JSON.parse(localStorage.getItem('previousData'))
+    if(previousTweets)
+    previousTweets.forEach((e)=>{
+        tweetsData.unshift(e)
+    })
+}
+handlePreviousTweets()
 
 function getFeedHtml(){
     let feedHtml = ``
